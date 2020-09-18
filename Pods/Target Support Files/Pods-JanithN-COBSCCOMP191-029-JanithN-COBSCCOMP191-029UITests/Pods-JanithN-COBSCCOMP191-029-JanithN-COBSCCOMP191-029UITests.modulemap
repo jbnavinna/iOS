@@ -1,0 +1,6 @@
+framework module Pods_JanithN_COBSCCOMP191_029_JanithN_COBSCCOMP191_029UITests {
+  umbrella header "Pods-JanithN-COBSCCOMP191-029-JanithN-COBSCCOMP191-029UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
