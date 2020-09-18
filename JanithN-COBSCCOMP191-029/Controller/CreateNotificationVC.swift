@@ -64,19 +64,25 @@ class CreateNotificationVC: UIViewController{
         formatter.dateFormat = "d/M/yy"
         let notifDate : String = formatter.string(from:   NSDate.init(timeIntervalSinceNow: 0) as Date)
         
-        
-        
-        db.collection("notifications").addDocument(data: ["notiftopic":notifTopic, "notifsummary":notifSummary,"notifdate":notifDate, "uid": userdata ]) { (error) in
-            
-            if error != nil {
-                // Show error message
-                self.errorLabel.isHidden=false
-                self.errorLabel.text="Unexpected error occured"
-            }
-            if proceedStatus==true{
-                self.performSegue(withIdentifier: "publishandgohome", sender: nil)
-            }
-        }
+
+                db.collection("notifications").document("update").setData([
+                    "notiftopic": notifTopic,
+                    "notifsummary": notifSummary,
+                    "notifdate": notifDate,
+                    "uid": userdata
+                    
+                ]) { (error) in
+                    
+                    if error != nil {
+                        // Show error message
+                        self.errorLabel.isHidden=false
+                        self.errorLabel.text="Unexpected error occured"
+                    }
+                    if proceedStatus==true{
+                        self.performSegue(withIdentifier: "publishandgohome", sender: nil)
+                    }
+                }
+                
     }
     
     @IBAction func discardPost(_ sender: Any) {

@@ -19,6 +19,9 @@ import FirebaseFirestore
 class HomeVC: UIViewController{
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet var formStackView: UIStackView!
+        
+    @IBOutlet weak var notifBody:
+        UILabel!
     
     @IBOutlet weak var lblInfected:
         UILabel!
@@ -31,14 +34,24 @@ class HomeVC: UIViewController{
     
     @IBOutlet weak var lblDate:
         UILabel!
+    @IBOutlet weak var midView: UIView!
     
     var infected=""
     var deaths=""
     var recovered=""
     var date=""
+     var notifSummary=""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //round corners
+//        self.midView.layer.cornerRadius = self.midView.frame.size.width / 2
+        self.midView.layer.cornerRadius = 10
+
+
+        self.midView.clipsToBounds = true
+        
         scrollView.translatesAutoresizingMaskIntoConstraints = false;
                
                self.scrollView.addSubview(formStackView)
@@ -63,7 +76,7 @@ class HomeVC: UIViewController{
         
          let db = Firestore.firestore()
 
-                
+            //set cases count
                 let docRef = db.collection("cases").document("update")
 
                 docRef.getDocument { (document, error) in
@@ -79,18 +92,31 @@ class HomeVC: UIViewController{
                         self.lblInfected.text=self.infected
                         self.lblDeaths.text=self.deaths
                         self.lblRecovered.text=self.recovered
-                        self.lblDate.text=("Last Updated: "+self.date)
-
-
-
-        //                print("INFECTED",self.infected)
-
+                        self.lblDate.text=("Updated: "+self.date)
                         
                         
                     } else {
                         print("Document does not exist")
                     }
                 }
+        
+        //set notification
+        let notiRef = db.collection("notifications").document("update")
+
+                 notiRef.getDocument { (document, error) in
+                     if let document = document, document.exists {
+                         let documentData = document.data()
+                         
+                         self.notifSummary = documentData?["notiftopic"]! as! String
+
+                         self.notifBody.text=self.notifSummary
+                
+                     } else {
+                         print("Document does not exist")
+                     }
+                 }
+        
+        
         
     }
     

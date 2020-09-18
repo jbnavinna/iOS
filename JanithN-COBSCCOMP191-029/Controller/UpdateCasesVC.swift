@@ -99,10 +99,9 @@ class UpdateCasesVC: UIViewController{
                 let db = Firestore.firestore()
                 //get current date
                 let formatter : DateFormatter = DateFormatter()
-                formatter.dateFormat = "d/M/yy"
+                formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                 let caseDate : String = formatter.string(from:   NSDate.init(timeIntervalSinceNow: 0) as Date)
                 
-                // Add a new document in collection "cities"
                 db.collection("cases").document("update").setData([
                     "infected": infected,
                     "deaths": deaths,

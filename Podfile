@@ -8,7 +8,9 @@ target 'JanithN-COBSCCOMP191-029' do
   # Pods for JanithN-COBSCCOMP191-029
 pod 'Firebase/Auth'
 pod 'Firebase/Analytics'
-pod 'Firebase/Firestore'# Add the pods for any other Firebase products you want to use in your app# For example, to use Firebase Authentication and Cloud Firestore
+pod 'Firebase/Firestore'
+# Add the pods for any other Firebase products you want to use in your app
+# For example, to use Firebase Authentication and Cloud Firestore
 
   target 'JanithN-COBSCCOMP191-029Tests' do
     inherit! :search_paths
