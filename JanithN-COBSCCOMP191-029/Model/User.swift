@@ -11,4 +11,5 @@ import Foundation
 struct User{
     static var userType=String()
     static var userLogStatus=Bool()
+    static var userHealth=String()
 }

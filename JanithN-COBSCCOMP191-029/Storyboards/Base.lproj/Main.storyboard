@@ -58,16 +58,16 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="615"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uar-9v-MS5">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uar-9v-MS5">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="ld9-Y8-I96"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personel Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56i-Fx-TAy">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56i-Fx-TAy">
                             <rect key="frame" x="0.0" y="55" width="320" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="bIN-A3-8j9"/>
@@ -76,7 +76,7 @@
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-Lz-Mta">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-Lz-Mta">
                             <rect key="frame" x="0.0" y="110" width="320" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Bix-Li-Y2F"/>
@@ -84,7 +84,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" textContentType="name"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ems-1z-rCa">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ems-1z-rCa">
                             <rect key="frame" x="0.0" y="160" width="320" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="nBr-rf-DGj"/>
@@ -92,7 +92,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" textContentType="name"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJa-3S-jpl">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJa-3S-jpl">
                             <rect key="frame" x="0.0" y="210" width="320" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="LGQ-mL-IPm"/>
@@ -100,7 +100,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" textContentType="email"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gud-Ie-m00">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gud-Ie-m00">
                             <rect key="frame" x="0.0" y="260" width="320" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="jMk-B0-1ph"/>
@@ -118,7 +118,7 @@
                             <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select User Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQK-KG-Lu0">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQK-KG-Lu0">
                             <rect key="frame" x="0.0" y="340" width="320" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="6dK-uU-WYr"/>
@@ -139,7 +139,7 @@
                                 <constraint firstAttribute="height" constant="50" id="trF-p8-kXJ"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <state key="normal" title="Create Now"/>
+                            <state key="normal" title="Sign Up"/>
                             <connections>
                                 <action selector="createNow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HRL-uo-kv8"/>
                                 <segue destination="W08-Dn-0cK" kind="presentation" identifier="registerToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="usc-LZ-icr"/>
@@ -150,7 +150,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="f69-ng-0bq"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <state key="normal" title="Already Have and Account?"/>
                             <connections>
                                 <segue destination="cDF-Uh-lJk" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="hIM-Yu-JYf"/>
@@ -162,7 +162,7 @@
                                 <constraint firstAttribute="height" constant="50" id="hYP-ix-BuF"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <state key="normal" title="Get Back Home"/>
+                            <state key="normal" title="Get Home"/>
                             <connections>
                                 <segue destination="W08-Dn-0cK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="dXx-Ag-yeO"/>
                             </connections>
@@ -187,13 +187,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Zi-uq-IaC" userLabel="Stack View1">
                                 <rect key="frame" x="20" y="183" width="374" height="470"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeQ-JG-Ird">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeQ-JG-Ird">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="NDb-BJ-JJM"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CNr-su-V7w">
@@ -227,7 +227,7 @@
                                             <constraint firstAttribute="height" constant="70" id="3u5-r9-j5r"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Sign In Now"/>
+                                        <state key="normal" title="Sign In"/>
                                         <connections>
                                             <action selector="signInNow:" destination="cDF-Uh-lJk" eventType="touchUpInside" id="DUB-kz-F7b"/>
                                             <segue destination="W08-Dn-0cK" kind="presentation" identifier="loginToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="gbE-nS-OO3"/>
@@ -247,7 +247,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Nbs-FK-PO5"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Register Here"/>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="EzC-iT-guR"/>
@@ -259,7 +259,7 @@
                                             <constraint firstAttribute="height" constant="50" id="lbo-aX-7IE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Go Back Home"/>
+                                        <state key="normal" title="Get Home"/>
                                         <connections>
                                             <segue destination="W08-Dn-0cK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="KtP-T1-iup"/>
                                         </connections>
@@ -345,12 +345,12 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHI-Sm-xge">
-                                        <rect key="frame" x="155" y="0.0" width="104" height="60"/>
+                                        <rect key="frame" x="162.5" y="0.0" width="89" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="vKr-ty-heD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Go to Home"/>
+                                        <state key="normal" title="Get Home"/>
                                         <connections>
                                             <segue destination="W08-Dn-0cK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="xG9-so-Cld"/>
                                         </connections>
@@ -673,7 +673,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OaF-cv-78j" userLabel="StackwithMap">
                             <rect key="frame" x="0.0" y="526.5" width="414" height="325"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500m near Infected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzJ-4U-gzW">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzJ-4U-gzW">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -912,7 +912,7 @@
                                             <constraint firstAttribute="height" constant="45" id="UTo-jg-6pD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Cancel Survey">
+                                        <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -988,7 +988,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="NO">
-                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="noClick:" destination="xYK-eQ-uzt" eventType="touchUpInside" id="RNA-7q-JKe"/>
@@ -1001,7 +1001,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="YES">
-                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="yesClick:" destination="xYK-eQ-uzt" eventType="touchUpInside" id="Fpo-RS-oW0"/>
@@ -1013,7 +1013,7 @@
                                             <constraint firstAttribute="height" constant="45" id="tJ3-6e-p2o"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Cancel Survey">
+                                        <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1114,7 +1114,7 @@
                                             <constraint firstAttribute="height" constant="45" id="S8Q-1c-2BE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Cancel Survey">
+                                        <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1215,7 +1215,7 @@
                                             <constraint firstAttribute="height" constant="45" id="6wu-vw-9wA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Cancel Survey">
+                                        <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1316,7 +1316,7 @@
                                             <constraint firstAttribute="height" constant="45" id="1aH-wn-Q95"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Cancel Survey">
+                                        <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1395,7 +1395,7 @@
                                             <constraint firstAttribute="height" constant="45" id="WzD-ZZ-F8y"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Go to Home">
+                                        <state key="normal" title="Get Home">
                                             <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1446,7 +1446,7 @@
         <scene sceneID="kAK-np-uvW">
             <objects>
                 <viewController title="HealthVC" id="0lA-rv-03U" customClass="UpdateHealthVC" customModule="NIBM_COVID19" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Tpl-hv-Nv9">
+                    <view key="view" contentMode="scaleToFill" id="Tpl-hv-Nv9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1568,11 +1568,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sKR-hn-41K" userLabel="LoginRequestView">
-                                <rect key="frame" x="0.0" y="88" width="414" height="0.0"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKR-hn-41K" userLabel="LoginRequestView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="niF-Bf-Fzd">
-                                        <rect key="frame" x="0.0" y="-90" width="414" height="180"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="niF-Bf-Fzd">
+                                        <rect key="frame" x="0.0" y="272.5" width="414" height="180"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looks like you need to signin" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AMc-7z-NJp">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
@@ -1695,7 +1695,7 @@
                                             <constraint firstAttribute="height" constant="45" id="wMF-YK-qOV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Go Back Home">
+                                        <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1780,7 +1780,7 @@
                                             <constraint firstAttribute="height" constant="45" id="lIC-97-VlG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Go Back Home">
+                                        <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1865,7 +1865,7 @@
                                             <constraint firstAttribute="height" constant="45" id="XiL-aB-Yc8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Go Back Home">
+                                        <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1950,7 +1950,7 @@
                                             <constraint firstAttribute="height" constant="45" id="FKL-et-2hx"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Go Back Home">
+                                        <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -2022,7 +2022,7 @@
                                             <constraint firstAttribute="height" constant="45" id="paC-SC-qof"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Go to Home">
+                                        <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -2199,7 +2199,7 @@
                                             <constraint firstAttribute="height" constant="60" id="M2D-7x-L1g"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="Go to Home"/>
+                                        <state key="normal" title="Get Home"/>
                                         <connections>
                                             <segue destination="W08-Dn-0cK" kind="presentation" modalPresentationStyle="fullScreen" id="K0B-gd-Ox7"/>
                                         </connections>
@@ -2283,12 +2283,12 @@
                                         <viewLayoutGuide key="frameLayoutGuide" id="k6k-gS-qaX"/>
                                     </scrollView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtC-rO-Osm">
-                                        <rect key="frame" x="155.5" y="481" width="103" height="60"/>
+                                        <rect key="frame" x="163.5" y="481" width="87" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="oL8-ez-5dy"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="Go to Home"/>
+                                        <state key="normal" title="Get Home"/>
                                         <connections>
                                             <segue destination="W08-Dn-0cK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="dN9-fa-Heo"/>
                                         </connections>
@@ -2605,9 +2605,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="q3P-jO-EQS"/>
-        <segue reference="K0B-gd-Ox7"/>
-        <segue reference="qFa-6D-EJC"/>
+        <segue reference="KrP-kR-joU"/>
+        <segue reference="KtP-T1-iup"/>
+        <segue reference="EzC-iT-guR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Contactless" width="800" height="760"/>

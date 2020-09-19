@@ -62,5 +62,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>NIBM COVID19 needs to access your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>NIBM COVID19 needs to access your location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>NIBM COVID19 needs to access your location</string>
 </dict>
 </plist>

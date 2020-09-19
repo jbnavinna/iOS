@@ -25,7 +25,7 @@ class UpdateProfileVC: UIViewController{
     @IBOutlet weak var ErrorLabel: UILabel!
     
     var country=""
-    var documentIdString=""  //this is kept for updating the user collection document
+    var documentIdString=""
     var index=""
     var userFirstName=""
     var userLastName=""
@@ -35,11 +35,11 @@ class UpdateProfileVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        IndexText.isHidden=true
-        
         if(User.userType=="Student"){
-            IndexText.isHidden=false
-        }
+                   IndexText.placeholder="Enter Student Id"
+               }else{
+                   IndexText.placeholder="Enter Work Id"
+               }
         
         ErrorLabel.isHidden = true
         
@@ -101,19 +101,11 @@ class UpdateProfileVC: UIViewController{
             return
         }
        
-        if(User.userType=="Student"){
-                if (IndexText.text?.count == 0) {
-                ErrorLabel.isHidden = false
-                ErrorLabel.text = "Please fill all details"
-                return
-                }else{
-                    index = IndexText.text!
-            }
-        }else if(User.userType=="Academic Staff"){
-            index=""
-        }else if(User.userType=="Non Academic Staff"){
-            index=""
-        }
+        guard let _ = IndexText.text, IndexText.text?.count != 0  else {
+              ErrorLabel.isHidden = false
+              ErrorLabel.text = "Please fill all details"
+              return
+          }
         
         if (country == "") {
             country="Sri Lanka"
