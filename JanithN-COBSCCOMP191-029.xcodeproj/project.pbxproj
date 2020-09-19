@@ -31,7 +31,7 @@
 		4484280C2512991E0052B082 /* UpdateHealthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4484280B2512991E0052B082 /* UpdateHealthVC.swift */; };
 		4484280E251299CD0052B082 /* CreateNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4484280D251299CD0052B082 /* CreateNotificationVC.swift */; };
 		4484281025129AE10052B082 /* FullMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4484280F25129AE10052B082 /* FullMapVC.swift */; };
-		448428122512A5050052B082 /* AllNotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448428112512A5050052B082 /* AllNotificationsVC.swift */; };
+		448428122512A5050052B082 /* ViewChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448428112512A5050052B082 /* ViewChartVC.swift */; };
 		448428142512AB580052B082 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448428132512AB580052B082 /* NotificationVC.swift */; };
 		44ABA4F82511CBA200A7510C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABA4F72511CBA200A7510C /* HomeVC.swift */; };
 		D91F9066C55F3E3AF1BB9795 /* Pods_JanithN_COBSCCOMP191_029.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E268154F09E2C65AD9608B /* Pods_JanithN_COBSCCOMP191_029.framework */; };
@@ -57,6 +57,19 @@
 			remoteInfo = "JanithN-COBSCCOMP191-029";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E31E11862515C4CA00C90C82 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0ED8E38E7805AF570160C2B5 /* Pods-JanithN-COBSCCOMP191-029.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JanithN-COBSCCOMP191-029.release.xcconfig"; path = "Target Support Files/Pods-JanithN-COBSCCOMP191-029/Pods-JanithN-COBSCCOMP191-029.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,7 +105,7 @@
 		4484280B2512991E0052B082 /* UpdateHealthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateHealthVC.swift; sourceTree = "<group>"; };
 		4484280D251299CD0052B082 /* CreateNotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotificationVC.swift; sourceTree = "<group>"; };
 		4484280F25129AE10052B082 /* FullMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullMapVC.swift; sourceTree = "<group>"; };
-		448428112512A5050052B082 /* AllNotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotificationsVC.swift; sourceTree = "<group>"; };
+		448428112512A5050052B082 /* ViewChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewChartVC.swift; sourceTree = "<group>"; };
 		448428132512AB580052B082 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
 		44ABA4F72511CBA200A7510C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		5DD20533B994B24EBF566D8E /* Pods_JanithN_COBSCCOMP191_029_JanithN_COBSCCOMP191_029UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JanithN_COBSCCOMP191_029_JanithN_COBSCCOMP191_029UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +113,7 @@
 		AE6573C574295BECEE200055 /* Pods-JanithN-COBSCCOMP191-029Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JanithN-COBSCCOMP191-029Tests.debug.xcconfig"; path = "Target Support Files/Pods-JanithN-COBSCCOMP191-029Tests/Pods-JanithN-COBSCCOMP191-029Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C69A710DECA75CAF1A80ADE0 /* Pods-JanithN-COBSCCOMP191-029-JanithN-COBSCCOMP191-029UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JanithN-COBSCCOMP191-029-JanithN-COBSCCOMP191-029UITests.release.xcconfig"; path = "Target Support Files/Pods-JanithN-COBSCCOMP191-029-JanithN-COBSCCOMP191-029UITests/Pods-JanithN-COBSCCOMP191-029-JanithN-COBSCCOMP191-029UITests.release.xcconfig"; sourceTree = "<group>"; };
 		D16794E2DDC5A37B6AC35DE9 /* Pods_JanithN_COBSCCOMP191_029Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JanithN_COBSCCOMP191_029Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E31E11832515C4CA00C90C82 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E36375BA25153DE600D9CBD0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E37645B42514BE1300A23AE5 /* UpdateCasesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCasesVC.swift; sourceTree = "<group>"; };
 		E8E268154F09E2C65AD9608B /* Pods_JanithN_COBSCCOMP191_029.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JanithN_COBSCCOMP191_029.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +150,7 @@
 		1F59819AAE7D641A7880279F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E31E11832515C4CA00C90C82 /* Charts.framework */,
 				E8E268154F09E2C65AD9608B /* Pods_JanithN_COBSCCOMP191_029.framework */,
 				5DD20533B994B24EBF566D8E /* Pods_JanithN_COBSCCOMP191_029_JanithN_COBSCCOMP191_029UITests.framework */,
 				D16794E2DDC5A37B6AC35DE9 /* Pods_JanithN_COBSCCOMP191_029Tests.framework */,
@@ -240,7 +255,7 @@
 				4484280B2512991E0052B082 /* UpdateHealthVC.swift */,
 				4484280D251299CD0052B082 /* CreateNotificationVC.swift */,
 				4484280F25129AE10052B082 /* FullMapVC.swift */,
-				448428112512A5050052B082 /* AllNotificationsVC.swift */,
+				448428112512A5050052B082 /* ViewChartVC.swift */,
 				448428132512AB580052B082 /* NotificationVC.swift */,
 				443ED0DD251311070092E111 /* RootVC.swift */,
 				443ED0E1251329850092E111 /* SettingsVC.swift */,
@@ -291,6 +306,7 @@
 				4451F230250DC72700A78346 /* Frameworks */,
 				4451F231250DC72700A78346 /* Resources */,
 				36DA965801099B9BA2C6DAC8 /* [CP] Embed Pods Frameworks */,
+				E31E11862515C4CA00C90C82 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -535,7 +551,7 @@
 				443ED0DE251311070092E111 /* RootVC.swift in Sources */,
 				448427FE25127ADE0052B082 /* SurveyScreen3VC.swift in Sources */,
 				4406CC402511204E00D2FF6B /* SurveyScreen1VC.swift in Sources */,
-				448428122512A5050052B082 /* AllNotificationsVC.swift in Sources */,
+				448428122512A5050052B082 /* ViewChartVC.swift in Sources */,
 				4406CC3E251106CB00D2FF6B /* SurveyBorderStyling.swift in Sources */,
 				443ED0E425136DDC0092E111 /* Survey.swift in Sources */,
 				44842808251294480052B082 /* Regex.swift in Sources */,

@@ -9,6 +9,8 @@ target 'JanithN-COBSCCOMP191-029' do
 pod 'Firebase/Auth'
 pod 'Firebase/Analytics'
 pod 'Firebase/Firestore'
+pod 'Charts'
+
 # Add the pods for any other Firebase products you want to use in your app
 # For example, to use Firebase Authentication and Cloud Firestore
 
