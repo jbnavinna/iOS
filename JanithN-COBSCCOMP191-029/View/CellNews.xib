@@ -21,7 +21,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnc-ZW-25J">
                                 <rect key="frame" x="10" y="10" width="355" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -31,13 +31,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxH-oA-pmE">
+                                <rect key="frame" x="245" y="98" width="123" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="zXh-yp-veA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="128" id="1W5-Hk-c5G"/>
+                            <constraint firstAttribute="bottom" secondItem="YxH-oA-pmE" secondAttribute="bottom" constant="9" id="FY2-7H-qjx"/>
                             <constraint firstAttribute="trailing" secondItem="hnc-ZW-25J" secondAttribute="trailing" constant="10" id="Hth-ml-fBT"/>
                             <constraint firstItem="hnc-ZW-25J" firstAttribute="top" secondItem="WiU-sZ-qZM" secondAttribute="top" constant="10" id="Wyz-b4-TMO"/>
+                            <constraint firstItem="YxH-oA-pmE" firstAttribute="top" secondItem="wOl-sF-WdQ" secondAttribute="bottom" constant="36.5" id="XKX-ce-zgB"/>
                             <constraint firstItem="hnc-ZW-25J" firstAttribute="leading" secondItem="WiU-sZ-qZM" secondAttribute="leading" constant="10" id="iJG-hl-iHk"/>
+                            <constraint firstAttribute="trailing" secondItem="YxH-oA-pmE" secondAttribute="trailing" constant="7" id="ioI-vX-Faq"/>
+                            <constraint firstItem="YxH-oA-pmE" firstAttribute="leading" secondItem="WiU-sZ-qZM" secondAttribute="leading" constant="245" id="mAe-sL-ddt"/>
                             <constraint firstAttribute="trailing" secondItem="wOl-sF-WdQ" secondAttribute="trailing" constant="10" id="qUc-HA-Lc9"/>
                             <constraint firstItem="wOl-sF-WdQ" firstAttribute="leading" secondItem="WiU-sZ-qZM" secondAttribute="leading" constant="10" id="rKL-R0-JgL"/>
                             <constraint firstItem="wOl-sF-WdQ" firstAttribute="top" secondItem="hnc-ZW-25J" secondAttribute="bottom" constant="10" id="tMt-aQ-9nl"/>
@@ -59,6 +72,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="lblContent" destination="wOl-sF-WdQ" id="0Yw-3g-rvH"/>
+                <outlet property="lblDate" destination="YxH-oA-pmE" id="63D-ON-vSL"/>
                 <outlet property="lblTitle" destination="hnc-ZW-25J" id="SMG-pE-qej"/>
             </connections>
             <point key="canvasLocation" x="206.52173913043481" y="141.29464285714286"/>

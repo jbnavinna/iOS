@@ -13,7 +13,7 @@ class CellNews: UITableViewCell {
     
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblContent: UILabel!
-    
+    @IBOutlet weak var lblDate: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,9 +25,10 @@ class CellNews: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(title: String, content: String) {
+    func configureCell(title: String, content: String, date: String) {
         lblTitle.text = title
         lblContent.text = content
+        lblDate.text = date
     }
     
 }

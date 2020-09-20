@@ -20,6 +20,11 @@ class SettingsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //round corners logout button
+            self.LogoutButton.layer.cornerRadius = 10
+            self.LogoutButton.clipsToBounds = true
+        
         self.signOutErrorLabel.isHidden=true
         
         if(User.userLogStatus==false){

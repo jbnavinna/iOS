@@ -17,6 +17,9 @@ class UpdateCasesVC: UIViewController{
     @IBOutlet weak var DeathCount: UITextField!
     @IBOutlet weak var RecoveredCount: UITextField!
 
+    @IBOutlet weak var btnUpdate: UIButton!
+    @IBOutlet weak var btnDiscard: UIButton!
+    
     @IBOutlet weak var errorLabel: UILabel!
     
     var infected=""
@@ -25,6 +28,14 @@ class UpdateCasesVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //round corners publish button
+                    self.btnUpdate.layer.cornerRadius = 10
+                    self.btnUpdate.clipsToBounds = true
+             
+             //round corners discard button
+                     self.btnDiscard.layer.cornerRadius = 10
+                     self.btnDiscard.clipsToBounds = true
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))

@@ -11,4 +11,5 @@ import Foundation
 struct Notification {
     var title: String
     var content: String
+    var date:String
 }

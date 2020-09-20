@@ -43,7 +43,7 @@ class NotificationVC: UIViewController{
                             continue
                         }
                         
-                        self.notificationData.append(Notification(title: innerData["title"] as! String, content: innerData["content"] as! String))
+                        self.notificationData.append(Notification(title: innerData["title"] as! String, content: innerData["content"] as! String,date:innerData["date"] as! String))
                     }
                     self.tblNotification.reloadData()
                 }
@@ -60,7 +60,7 @@ class NotificationVC: UIViewController{
                         continue
                     }
                     
-                    self.notificationData.append(Notification(title: innerData["title"] as! String, content: innerData["content"] as! String))
+                    self.notificationData.append(Notification(title: innerData["title"] as! String, content: innerData["content"] as! String,date: innerData["date"] as! String))
                 }
                 self.tblNotification.reloadData()
             }
@@ -75,7 +75,7 @@ extension NotificationVC : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tblNotification.dequeueReusableCell(withIdentifier: "resuableNewsCell", for: indexPath) as! CellNews
-        cell.configureCell(title: notificationData[indexPath.row].title, content: notificationData[indexPath.row].content)
+        cell.configureCell(title: notificationData[indexPath.row].title,content: notificationData[indexPath.row].content, date: notificationData[indexPath.row].date)
         return cell
     }
 }

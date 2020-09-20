@@ -17,6 +17,9 @@ class CreateNotificationVC: UIViewController{
     @IBOutlet weak var NotifTopic: UITextField!
     
     @IBOutlet weak var NotifSummary: UITextField!
+    @IBOutlet weak var btnPublish: UIButton!
+    
+    @IBOutlet weak var btnDiscard: UIButton!
     
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -30,6 +33,14 @@ class CreateNotificationVC: UIViewController{
 
            view.addGestureRecognizer(tap)
         self.errorLabel.isHidden=true
+        
+        //round corners publish button
+               self.btnPublish.layer.cornerRadius = 10
+               self.btnPublish.clipsToBounds = true
+        
+        //round corners discard button
+                self.btnDiscard.layer.cornerRadius = 10
+                self.btnDiscard.clipsToBounds = true
    
     }
     //Calls this function when the tap is recognized.
@@ -87,7 +98,8 @@ class CreateNotificationVC: UIViewController{
         let rtDBRef = Database.database().reference()
         let notificationData = [
             "title" : notifTopic,
-            "content" : notifSummary
+            "content" : notifSummary,
+            "date": notifDate
         ]
         
         rtDBRef.child("notifications").child(rtDBRef.child("notifications").childByAutoId().key ?? "defaultkey").setValue(notificationData) {

@@ -19,6 +19,8 @@ class UpdateProfileVC: UIViewController{
     
     @IBOutlet weak var IndexText: UITextField!
     
+    @IBOutlet weak var btnUpdate: UIButton!
+    
     @IBOutlet weak var CountryPicker: UIPickerView!
     private let dataSource = ["Sri Lanka","United Kingdom"]
     
@@ -32,8 +34,23 @@ class UpdateProfileVC: UIViewController{
     var userIndex=""
     var countrySelected=""
     
+    var pickerStatus=false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //dismiss keyboard
+        //Looks for single or multiple taps.
+               let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+
+               //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+               //tap.cancelsTouchesInView = false
+
+               view.addGestureRecognizer(tap)
+        
+        //round corners publish button
+            self.btnUpdate.layer.cornerRadius = 10
+            self.btnUpdate.clipsToBounds = true
         
         if(User.userType=="Student"){
                    IndexText.placeholder="Enter Student Id"
@@ -74,8 +91,10 @@ class UpdateProfileVC: UIViewController{
                         
                         if(self.countrySelected=="Sri Lanka"){
                             self.CountryPicker.selectRow(0, inComponent:0, animated:true)
+                            self.pickerStatus=false
                         }else if(self.countrySelected=="United Kingdom"){
                             self.CountryPicker.selectRow(1, inComponent:0, animated:true)
+                            self.pickerStatus=true
                         }
                 }
               }
@@ -87,6 +106,10 @@ class UpdateProfileVC: UIViewController{
         
    
     }
+    @objc func dismissKeyboard() {
+          //Causes the view (or one of its embedded text fields) to resign the first responder status.
+          view.endEditing(true)
+      }
     
     @IBAction func updateNow(_ sender: Any) {
         guard let fName = FirstNameText.text, FirstNameText.text?.count != 0  else {
@@ -101,14 +124,17 @@ class UpdateProfileVC: UIViewController{
             return
         }
        
-        guard let _ = IndexText.text, IndexText.text?.count != 0  else {
+        guard let index = IndexText.text, IndexText.text?.count != 0  else {
               ErrorLabel.isHidden = false
               ErrorLabel.text = "Please fill all details"
               return
           }
         
-        if (country == "") {
+        if (country == "" && pickerStatus == false) {
             country="Sri Lanka"
+        }else if(country == "" && pickerStatus == true)
+        {
+            country="United Kingdom"
         }
         ErrorLabel.isHidden=true
         
