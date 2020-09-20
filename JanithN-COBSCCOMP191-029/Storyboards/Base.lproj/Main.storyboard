@@ -101,7 +101,7 @@
                                 <constraint firstAttribute="height" constant="40" id="LGQ-mL-IPm"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" textContentType="email"/>
+                            <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gud-Ie-m00">
                             <rect key="frame" x="0.0" y="260" width="320" height="40"/>
@@ -109,7 +109,7 @@
                                 <constraint firstAttribute="height" constant="40" id="jMk-B0-1ph"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUt-4Q-bZ2">
                             <rect key="frame" x="0.0" y="310" width="320" height="20"/>
@@ -210,7 +210,7 @@
                                             <constraint firstAttribute="height" constant="40" id="C9h-HR-qRI"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4VX-fl-3Cp">
                                         <rect key="frame" x="0.0" y="160" width="374" height="40"/>
@@ -218,7 +218,7 @@
                                             <constraint firstAttribute="height" constant="40" id="QSu-cD-uyK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgI-OK-q2p">
                                         <rect key="frame" x="0.0" y="210" width="374" height="20"/>
@@ -2146,7 +2146,7 @@
                                             <constraint firstAttribute="height" constant="40" id="TsT-6n-gyo"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jp3-bE-Gsa" userLabel="LastName">
                                         <rect key="frame" x="0.0" y="160" width="374" height="40"/>
@@ -2154,7 +2154,7 @@
                                             <constraint firstAttribute="height" constant="40" id="9Em-3F-moG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Student ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jpe-1A-W0G">
                                         <rect key="frame" x="0.0" y="210" width="374" height="40"/>
@@ -2292,7 +2292,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lecturer : Thusitha Jayalal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6I-bp-1cr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lecturer : Thusitha Jayalath" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6I-bp-1cr">
                                         <rect key="frame" x="0.0" y="225" width="300" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="XvZ-2L-G67"/>
@@ -2346,11 +2346,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="50Y-Oa-0r2">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="50Y-Oa-0r2">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjT-tV-qNl" customClass="PieChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyC-au-00M">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="748" width="414" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="M2D-7x-L1g"/>
                                         </constraints>
@@ -2360,25 +2364,21 @@
                                             <segue destination="W08-Dn-0cK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="K0B-gd-Ox7"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjT-tV-qNl" customClass="PieChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="60" width="414" height="748"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="kjT-tV-qNl" firstAttribute="top" secondItem="gyC-au-00M" secondAttribute="bottom" id="JwP-D3-jIq"/>
-                                    <constraint firstItem="kjT-tV-qNl" firstAttribute="leading" secondItem="50Y-Oa-0r2" secondAttribute="leading" id="Q70-v1-VNe"/>
-                                    <constraint firstAttribute="bottom" secondItem="kjT-tV-qNl" secondAttribute="bottom" id="mRv-NZ-cld"/>
-                                    <constraint firstAttribute="trailing" secondItem="kjT-tV-qNl" secondAttribute="trailing" id="omP-B0-dhJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="gyC-au-00M" secondAttribute="bottom" constant="10" id="GJG-HO-8k7"/>
+                                    <constraint firstItem="gyC-au-00M" firstAttribute="top" secondItem="kjT-tV-qNl" secondAttribute="bottom" constant="20" id="eZY-3h-BkQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="kjT-tV-qNl" secondAttribute="trailing" id="hJN-lh-BzL"/>
+                                    <constraint firstItem="kjT-tV-qNl" firstAttribute="leading" secondItem="50Y-Oa-0r2" secondAttribute="leading" id="qdw-G1-0t6"/>
+                                    <constraint firstAttribute="bottom" secondItem="kjT-tV-qNl" secondAttribute="bottom" constant="20" id="uPO-qy-b5G"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="50Y-Oa-0r2" firstAttribute="leading" secondItem="x5e-LY-rt0" secondAttribute="leading" id="RcJ-TL-MRM"/>
-                            <constraint firstAttribute="bottom" secondItem="50Y-Oa-0r2" secondAttribute="bottom" id="Xuh-Hg-PTZ"/>
-                            <constraint firstItem="50Y-Oa-0r2" firstAttribute="top" secondItem="jTv-op-DV7" secondAttribute="top" id="iji-wL-dnf"/>
-                            <constraint firstItem="jTv-op-DV7" firstAttribute="trailing" secondItem="50Y-Oa-0r2" secondAttribute="trailing" id="z4t-Xz-Ed5"/>
+                            <constraint firstItem="50Y-Oa-0r2" firstAttribute="trailing" secondItem="jTv-op-DV7" secondAttribute="trailing" id="RzP-D6-Zk1"/>
+                            <constraint firstItem="50Y-Oa-0r2" firstAttribute="leading" secondItem="jTv-op-DV7" secondAttribute="leading" id="UYU-tA-2UI"/>
+                            <constraint firstItem="50Y-Oa-0r2" firstAttribute="height" secondItem="jTv-op-DV7" secondAttribute="height" multiplier="1.04393" id="dRf-Oo-qbF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jTv-op-DV7"/>
                     </view>
@@ -2772,8 +2772,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="hIM-Yu-JYf"/>
         <segue reference="KrP-kR-joU"/>
-        <segue reference="WrB-YA-6PH"/>
+        <segue reference="dXx-Ag-yeO"/>
         <segue reference="EzC-iT-guR"/>
     </inferredMetricsTieBreakers>
     <resources>

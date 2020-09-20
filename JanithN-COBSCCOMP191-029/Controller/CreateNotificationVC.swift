@@ -73,7 +73,7 @@ class CreateNotificationVC: UIViewController{
         let db = Firestore.firestore()
         //get current date
         let formatter : DateFormatter = DateFormatter()
-        formatter.dateFormat = "d/M/yy"
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let notifDate : String = formatter.string(from:   NSDate.init(timeIntervalSinceNow: 0) as Date)
         
 
