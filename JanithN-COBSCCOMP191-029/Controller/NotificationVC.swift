@@ -9,50 +9,81 @@
 import Foundation
 import UIKit
 import FirebaseFirestore
-
+import Firebase
 
 class NotificationVC: UIViewController{
+
+    @IBOutlet weak var tblNotification: UITableView!
     
-    @IBOutlet weak var notifTitle: UILabel!
-    
-    @IBOutlet weak var notifBody: UITextView!
+    var notificationData : [Notification] = []
     
     var notiftitle=""
     var notifsummary=""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let db = Firestore.firestore()
-
-        //set notification
-          let notiRef = db.collection("notifications").document("update")
-
-                   notiRef.getDocument { (document, error) in
-                       if let document = document, document.exists {
-                           let documentData = document.data()
-                           
-                           self.notiftitle = documentData?["notiftopic"]! as! String
-                        self.notifsummary = documentData?["notifsummary"]! as! String
-                        
-                        print("Summary",self.notifsummary)
-
-
-
-                        self.notifTitle.text=self.notiftitle
-                        self.notifBody.text=self.notifsummary
-                  
-                       } else {
-                           print("Document does not exist")
-                       }
-                   }
-          
-   
+        tblNotification.register(UINib(nibName: "CellNews", bundle: nil), forCellReuseIdentifier: "resuableNewsCell")
+        fetchNotificationData()
     }
     
-    @IBAction func viewMessage(_ sender: UIButton) {
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func fetchNotificationData() {
+        let rtDBRef = Database.database().reference()
+        var initialRead = true
+        notificationData.removeAll()
+        rtDBRef.child("notifications").observe(.childAdded, with: {
+            snapshot in
+            if initialRead == false {
+                if let dict = snapshot.value as? [String : Any] {
+                    for data in dict {
+                        guard let innerData = data.value as? [String : Any] else{
+                            continue
+                        }
+                        
+                        self.notificationData.append(Notification(title: innerData["title"] as! String, content: innerData["content"] as! String))
+                    }
+                    self.tblNotification.reloadData()
+                }
+            }
+        })
+        
+        rtDBRef.child("notifications").observeSingleEvent(of: .value, with: {
+            snapshot in
+            initialRead = false
+            
+            if let dict = snapshot.value as? [String : Any] {
+                for data in dict {
+                    guard let innerData = data.value as? [String : Any] else{
+                        continue
+                    }
+                    
+                    self.notificationData.append(Notification(title: innerData["title"] as! String, content: innerData["content"] as! String))
+                }
+                self.tblNotification.reloadData()
+            }
+        })
+    }
+}
+
+extension NotificationVC : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return notificationData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tblNotification.dequeueReusableCell(withIdentifier: "resuableNewsCell", for: indexPath) as! CellNews
+        cell.configureCell(title: notificationData[indexPath.row].title, content: notificationData[indexPath.row].content)
+        return cell
+    }
+}
+
+extension NotificationVC : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: notificationData[indexPath.row].title, message: notificationData[indexPath.row].content, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        self.present(alert , animated: true)
     }
 }

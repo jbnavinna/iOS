@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CoreLocation
+
 
 struct User{
     static var userType=String()

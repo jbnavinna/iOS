@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import Firebase
+import CoreLocation
 
 class UpdateHealthVC: UIViewController{
     
@@ -18,17 +20,19 @@ class UpdateHealthVC: UIViewController{
     
     @IBOutlet weak var NewNotificationButton: UIButton!
     
-    //survey Updated Date survey
     @IBOutlet weak var updatedDateSurvey: UILabel!
     
-    //survey Updated Date health
     @IBOutlet weak var updatedDateHealth: UILabel!
-    
     
     @IBOutlet weak var TempPicker: UIPickerView!
     private let dataSource = ["35°C - 37.5°C","Above 37.5°C"]
     
     @IBOutlet weak var tempLabel: UILabel!
+    
+    var currentLat: Double = 0
+    var currentLon: Double = 0
+    
+    let locationManager =  CLLocationManager()
     
     var bodyTemp=""
     var documentIdString=""
@@ -41,6 +45,11 @@ class UpdateHealthVC: UIViewController{
 
           //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
           //tap.cancelsTouchesInView = false
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = 20
+        locationManager.requestAlwaysAuthorization()
 
           view.addGestureRecognizer(tap)
         if(User.userLogStatus==false)
@@ -84,9 +93,7 @@ class UpdateHealthVC: UIViewController{
                         temp = documentData["temp"]! as! String
                         tempdate = documentData["tempdate"]! as! String
                         surveydate = documentData["surveydate"]! as! String
-                        self.tempLabel.text=temp
                         self.updatedDateSurvey.text=surveydate
-                        self.updatedDateHealth.text=tempdate
                         self.documentIdString=document.documentID
                         if(temp=="35°C - 37.5°C"){
                             self.TempPicker.selectRow(0, inComponent:0, animated:true)
@@ -105,6 +112,13 @@ class UpdateHealthVC: UIViewController{
         TempPicker.dataSource=self
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.main.async {
+            self.locationManager.startUpdatingLocation()
+        }
+    }
+    
     //Calls this function when the tap is recognized.
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
@@ -126,6 +140,37 @@ class UpdateHealthVC: UIViewController{
         
         self.tempLabel.text=bodyTemp
         self.updatedDateHealth.text=tempDate
+        
+        let rtDBRef = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        
+        if currentLat == 0 && currentLon == 0 {
+            let lastLocation = locationManager.location?.coordinate
+            currentLat = lastLocation?.latitude ?? 10
+            currentLon = lastLocation?.longitude ?? 10
+        }
+        
+        let tempData = [
+            "uid" : uid,
+            "temp" : bodyTemp,
+            "lat" : currentLat,
+            "lon" : currentLon
+        ] as [String : Any]
+        
+        if let uid = uid{
+            rtDBRef.child("temperatureData").child(uid).setValue(tempData) {
+                (error: Error?, ref: DatabaseReference) in
+                if let error = error {
+                    print("Tempratre data not added " + error.localizedDescription)
+                } else {
+                    print("Temprature data added")
+                }
+            }
+        }
+        
+        
+        
+        
         
         let alert = UIAlertController(title: "Temperature Update Success", message: nil,preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Done", style: .default, handler: nil))
@@ -152,4 +197,18 @@ extension UpdateHealthVC: UIPickerViewDelegate, UIPickerViewDataSource{
         return dataSource[row]
     }
     
+}
+
+extension UpdateHealthVC : CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("Locations changed")
+        if let location = locations.last {
+            self.currentLat = location.coordinate.latitude
+            self.currentLon = location.coordinate.longitude
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
+    }
 }

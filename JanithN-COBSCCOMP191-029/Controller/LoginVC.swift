@@ -18,13 +18,22 @@ class LoginVC:UIViewController{
     @IBOutlet weak var Password: UITextField!
     
     @IBOutlet weak var errorLabel: UILabel!
-    //@IBOutlet weak var scrollView: UIScrollView!
     
-    //@IBOutlet var formStackView: UIStackView!
+    @IBOutlet weak var signIn: UIButton!
+    
+    @IBOutlet weak var btnRegister: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.errorLabel.isHidden=true
+        
+            //round corners sign in button
+            self.signIn.layer.cornerRadius = 10
+            self.signIn.clipsToBounds = true
+        
+            //round corners register button
+            self.btnRegister.layer.cornerRadius = 10
+            self.btnRegister.clipsToBounds = true
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
@@ -50,13 +59,13 @@ class LoginVC:UIViewController{
         var status=true
         guard let email = EmailAddress.text, EmailAddress.text?.count != 0  else {
             errorLabel.isHidden = false
-            errorLabel.text = "Please fill all details"
+            errorLabel.text = "Please enter your Email"
             return
         }
         
         guard let password = Password.text, Password.text?.count != 0  else {
             errorLabel.isHidden = false
-            errorLabel.text = "Please fill all details"
+            errorLabel.text = "Please enter your Password"
             return
         }
         
@@ -69,7 +78,7 @@ class LoginVC:UIViewController{
         if Regex.isPasswordValid(password: password) == false{
             errorLabel.isHidden = false
             Password.text=""
-            errorLabel.text = "Password must be 8 letters including Caps and signs"
+            errorLabel.text = "Invalid Password!"
             status=false
         }
         
@@ -83,11 +92,11 @@ class LoginVC:UIViewController{
                 // Couldn't sign in
                 self.errorLabel.text = "Invalid credentials"
                 User.userLogStatus=false
-                print("User login unsuccessful")
+                print("Login unsuccessful")
                 print(User.userLogStatus)
             }else{
                 User.userLogStatus=true
-                print("User logged in successfully")
+                print("Logged in Successfully")
                 print(User.userLogStatus)
                 //get user type
                 
@@ -106,12 +115,13 @@ class LoginVC:UIViewController{
                             print(typedata)
                             User.userType=typedata
                     }
+                        self.performSegue(withIdentifier: "loginToHome", sender: nil)
                   }
                 }
                 
                 
                 
-                self.performSegue(withIdentifier: "loginToHome", sender: nil)
+                
             }
         }
             

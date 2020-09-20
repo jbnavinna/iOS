@@ -35,10 +35,20 @@ class RegisterVC: UIViewController{
     
     @IBOutlet var formStackView: UIStackView!
     
+    @IBOutlet weak var btnSignup: UIButton!
     
+    @IBOutlet weak var btnSignin: UIButton!
     var userType=""
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //round corners sign up button
+               self.btnSignup.layer.cornerRadius = 10
+               self.btnSignup.clipsToBounds = true
+        
+        //round corners sign in button
+               self.btnSignin.layer.cornerRadius = 10
+               self.btnSignin.clipsToBounds = true
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
@@ -92,38 +102,38 @@ class RegisterVC: UIViewController{
         var status=true
         guard let fName = FirstName.text, FirstName.text?.count != 0  else {
             passwordLabel.isHidden = false
-            passwordLabel.text = "Please fill all details"
+            passwordLabel.text = "Firstname can't be empty"
             return
         }
         
         guard let lName = LastName.text, LastName.text?.count != 0  else {
             passwordLabel.isHidden = false
-            passwordLabel.text = "Please fill all details"
+            passwordLabel.text = "Lastname can't be empty!"
             return
         }
         
         guard let email = EmailAddress.text, EmailAddress.text?.count != 0  else {
             passwordLabel.isHidden = false
-            passwordLabel.text = "Please fill all details"
+            passwordLabel.text = "Email can't be empty!"
             return
         }
         
         guard let password = Password.text, Password.text?.count != 0  else {
             passwordLabel.isHidden = false
-            passwordLabel.text = "Please fill all details"
+            passwordLabel.text = "Password can't be empty!"
             return
         }
         
         if Regex.isValidEmail(emailID: email) == false {
             passwordLabel.isHidden = false
             EmailAddress.text=""
-            passwordLabel.text = "Please enter valid email address"
+            passwordLabel.text = "Please enter a valid email address"
             status=false
         }
         if Regex.isPasswordValid(password:password)==false{
             passwordLabel.isHidden = false
             Password.text=""
-            passwordLabel.text = "Password must be 8 letters including Caps and signs"
+            passwordLabel.text = "Password must be atleast 8 letters"
             status=false
         }
         if (userType == "") {
@@ -141,7 +151,7 @@ class RegisterVC: UIViewController{
                     
                     // There was an error creating the user
                     self.passwordLabel.isHidden=false
-                    self.passwordLabel.text="Error: Try out a different email"
+                    self.passwordLabel.text="Error: Try a different Email"
                 }
                 else {
                     
@@ -162,26 +172,33 @@ class RegisterVC: UIViewController{
                         }
                         User.userType=self.userType  //adding data at registration the user type
                     }
+                    db.collection("locations").addDocument(data: ["lat":"", "lon":"","uid": result!.user.uid ]) { (error) in
+                                                         
+                        if error != nil {
+                            // Show error message
+                                                           
+                        }
+                                                     
+                    }
+                
                     
                     if Auth.auth().currentUser?.uid != nil {
                         User.userLogStatus=true
-                        print("log status is true++++++++++++++++++++++++++++++++++++++++++++++++at REg")
-                        
+                
+                         self.performSegue(withIdentifier: "registerToHome", sender: nil)
                     } else {
                        User.userLogStatus=false
-                        print("log status is false++++++++++++++++++++++++++++++++++++++++++++++++++++++++++at Reg")
+                     
                     }
                     
-                    self.performSegue(withIdentifier: "registerToHome", sender: nil)
+                   
                 }
                 
             }
-
             
         }
+   
     }
-
-    
 
 }
 

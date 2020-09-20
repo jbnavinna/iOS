@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
+import Firebase
 
 class CreateNotificationVC: UIViewController{
     
@@ -82,6 +83,21 @@ class CreateNotificationVC: UIViewController{
                         self.performSegue(withIdentifier: "publishandgohome", sender: nil)
                     }
                 }
+        
+        let rtDBRef = Database.database().reference()
+        let notificationData = [
+            "title" : notifTopic,
+            "content" : notifSummary
+        ]
+        
+        rtDBRef.child("notifications").child(rtDBRef.child("notifications").childByAutoId().key ?? "defaultkey").setValue(notificationData) {
+            (error: Error?, ref:DatabaseReference) in
+            if let error = error {
+                print("Data not saved : " + error.localizedDescription)
+            } else {
+                print("Data saved")
+            }
+        }
                 
     }
     
